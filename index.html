@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of [Your Name], showcasing projects, skills, and contact information.">
+    <title>Gaurav | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header role="banner">
+        <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        <nav role="navigation" aria-label="Main navigation" class="nav-menu">
+            <ul>
+                <li><a href="#about-me" aria-current="page">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-me" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>Hi, I'm Gaurav, a passionate web developer with expertise in creating accessible and user-friendly websites. I specialize in front-end development and love building innovative solutions.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="project-filter">
+            <button data-filter="all" class="filter-btn active">All</button>
+            <button data-filter="web" class="filter-btn">Web</button>
+            <button data-filter="app" class="filter-btn">App</button>
+        </div>
+        <article class="project web">
+            <h3>Project 1: Portfolio Website</h3>
+            <figure>
+                <img src="project1.jpg" alt="Screenshot of a personal portfolio website with a clean, modern design" class="project-img">
+                <figcaption>A responsive portfolio website built with HTML, CSS, and JavaScript.</figcaption>
+            </figure>
+            <p>This project showcases my skills in semantic HTML and responsive design.</p>
+        </article>
+        <article class="project app">
+            <h3>Project 2: E-commerce Platform</h3>
+            <figure>
+                <img src="project2.jpg" alt="Screenshot of an e-commerce platform with product listings and a shopping cart" class="project-img">
+                <figcaption>An e-commerce site with dynamic product filtering.</figcaption>
+            </figure>
+            <p>Built using React and Node.js, this platform supports user authentication and payments.</p>
+        </article>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Git</li>
+            <li>Accessibility (WCAG)</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <form id="contact-form" action="/submit" method="post" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+            <span class="error" id="name-error"></span>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+            <span class="error" id="email-error"></span>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+            <span class="error" id="message-error"></span>
+            
+            <button type="submit" aria-label="Submit contact form">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Gaurav. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox">
+        <span class="lightbox-close" aria-label="Close lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged project image">
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
